@@ -10,7 +10,9 @@ public class Animal {
 	private String genero;
 	private Zona zona;
 	
-	public Animal() {}
+	public Animal() {
+		totalAnimales++;
+	}
 	
 	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
@@ -33,10 +35,6 @@ public class Animal {
 	}
 	
 	public String toString() {
-		return "";
-	}
-	
-	public String getNombre() {
 		if(zona != null) {
 			return "Mi nombre es " + nombre + 
 					", tengo una edad de " + String.valueOf(edad) + 
@@ -50,6 +48,10 @@ public class Animal {
 					", habito en " + habitat +
 					" y mi genero es " + genero;
 		}
+	}
+	
+	public String getNombre() {
+		return this.nombre;
 	}
 	
 	public void setNombre(String nombre) {
