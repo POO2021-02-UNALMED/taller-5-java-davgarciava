@@ -1,6 +1,5 @@
 package zooAnimales;
 
-import gestion.Zona;
 import java.util.*;
 
 public class Reptil extends Animal {
@@ -12,12 +11,11 @@ public class Reptil extends Animal {
 	
 	public Reptil() {}
 	
-	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
 		setGenero(genero);
-		setZona(zona);
 		this.colorEscamas = colorEscamas;
 		this.largoCola = largoCola;
 		Reptil.listado.add(this);
@@ -35,13 +33,13 @@ public class Reptil extends Animal {
 		return "reptar";
 	}
 	
-	public void crearIguana(String nombre, int edad, String genero, Zona zona) {
-		new Reptil(nombre, edad, "humedal", genero, zona, "verde", 3);
+	public void crearIguana(String nombre, int edad, String genero) {
+		new Reptil(nombre, edad, "humedal", genero, "verde", 3);
 		Reptil.iguanas++;
 	}
 	
-	public void crearSerpiente(String nombre, int edad, String genero, Zona zona) {
-		new Reptil(nombre, edad, "jungla", genero, zona, "blanco", 1);
+	public void crearSerpiente(String nombre, int edad, String genero) {
+		new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
 		Reptil.serpientes++;
 	}
 	

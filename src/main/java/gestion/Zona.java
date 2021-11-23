@@ -10,14 +10,13 @@ public class Zona {
 	
 	public Zona() {}
 	
-	public Zona(String nombre, Zoologico zoo, List<Animal> animales) {
+	public Zona(String nombre, Zoologico zoo) {
 		this.nombre = nombre;
 		this.zoo = zoo;
-		this.animales = animales;
 	}
 	
-	public void agregarAnimales(String nombre, int edad, String habitat, String genero) {
-		Animal nuevoAnimal = new Animal(nombre, edad, habitat, genero, this);
+	public void agregarAnimales(Animal nuevoAnimal) {
+		nuevoAnimal.setZona(this);
 		animales.add(nuevoAnimal);
 	}
 	

@@ -9,14 +9,13 @@ public class Zoologico {
 	
 	public Zoologico() {}
 	
-	public Zoologico(String nombre, String ubicacion, List<Zona> zonas) {
+	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
-		this.zonas = zonas;
 	}
 	
-	public void agregarZonas(String nombre) {
-		Zona nuevaZona = new Zona(nombre, this, null);
+	public void agregarZonas(Zona nuevaZona) {
+		nuevaZona.setZoo(this);
 		zonas.add(nuevaZona);
 	}
 	
@@ -44,7 +43,7 @@ public class Zoologico {
 		this.ubicacion = ubicacion;
 	}
 	
-	public List<Zona> getZonas() {
+	public List<Zona> getZona() {
 		return this.zonas;
 	}
 }

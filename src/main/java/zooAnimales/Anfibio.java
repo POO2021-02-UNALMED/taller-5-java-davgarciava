@@ -1,6 +1,5 @@
 package zooAnimales;
 
-import gestion.Zona;
 import java.util.*;
 
 public class Anfibio extends Animal {
@@ -12,12 +11,11 @@ public class Anfibio extends Animal {
 	
 	public Anfibio() {}
 	
-	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, boolean venenoso) {
+	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
 		setGenero(genero);
-		setZona(zona);
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
 		Anfibio.listado.add(this);
@@ -35,13 +33,13 @@ public class Anfibio extends Animal {
 		return "saltar";
 	}
 	
-	public void crearRana(String nombre, int edad, String genero, Zona zona) {
-		new Anfibio(nombre, edad, "selva", genero, zona, "rojo", true);
+	public void crearRana(String nombre, int edad, String genero) {
+		new Anfibio(nombre, edad, "selva", genero, "rojo", true);
 		Anfibio.ranas++;
 	}
 	
-	public void crearSalamandra(String nombre, int edad, String genero, Zona zona) {
-		new Anfibio(nombre, edad, "selva", genero, zona, "negro y amarillo", false);
+	public void crearSalamandra(String nombre, int edad, String genero) {
+		new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
 		Anfibio.ranas++;
 	}
 	
@@ -53,7 +51,7 @@ public class Anfibio extends Animal {
 		this.colorPiel = colorPiel;
 	}
 
-	public boolean getVenenoso() {
+	public boolean isVenenoso() {
 		return this.venenoso;
 	}
 	

@@ -1,6 +1,5 @@
 package zooAnimales;
 
-import gestion.Zona;
 import java.util.*;
 
 public class Ave extends Animal {
@@ -11,12 +10,11 @@ public class Ave extends Animal {
 	
 	public Ave() {}
 	
-	public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
 		setNombre(nombre);
 		setEdad(edad);
 		setHabitat(habitat);
 		setGenero(genero);
-		setZona(zona);
 		this.colorPlumas = colorPlumas;
 		Ave.listado.add(this);
 	}
@@ -33,13 +31,13 @@ public class Ave extends Animal {
 		return "volar";
 	}
 	
-	public void crearHalcon(String nombre, int edad, String genero, Zona zona) {
-		new Ave(nombre, edad, "montanas", genero, zona, "cafe glorioso");
+	public void crearHalcon(String nombre, int edad, String genero) {
+		new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
 		Ave.halcones++;
 	}
 	
-	public void crearAguila(String nombre, int edad, String genero, Zona zona) {
-		new Ave(nombre, edad, "montanas", genero, zona, "blanco y amarillo");
+	public void crearAguila(String nombre, int edad, String genero) {
+		new Ave(nombre, edad, "montanas", genero, "blanco y amarillo");
 		Ave.aguilas++;
 	}
 	
